@@ -14,7 +14,9 @@ test("rendering episodes from dummy data", () => {
     const { rerender, queryAllByTestId } = render(<Episodes episodes={[]} />);
 
     rerender(<Episodes episodes={dummyData._embedded.episodes} />);
-    expect(queryAllByTestId(/episodes-list/i)).toHaveLength(26);
+    console.log(dummyData._embedded.episodes);
+    expect(queryAllByTestId(/episode-list/i)).toHaveLength(26);
 });
+
 
 

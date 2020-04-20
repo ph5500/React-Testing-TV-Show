@@ -12,10 +12,3 @@ test("render fetched data", async () => {
     const { getByText } = render(<App />);
     expect(getByText("Fetching data...")).toBeInTheDocument();
 });
-test("working api call", async () => {
-    mockFetchShow.mockResolvedValueOnce(dummyData);
-    render(<App />);
-    await waitFor(() => {
-
-    })
-});
